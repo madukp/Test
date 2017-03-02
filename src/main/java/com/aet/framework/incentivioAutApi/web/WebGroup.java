@@ -34,26 +34,23 @@ public String createGroup_forCatalog(String webAccessToken, String clientId, Str
 	int optionGroupSize = Integer.parseInt(Utilities.getsubGroupSize());
 	
 	
-	
-	
 	for(int i=0;i<subGroupSize;i++)
 	{
-		Utilities.printInfoMessage(" --- # subgroupIds " + subGroupSize);
+		
 		if(i<subGroupSize-1)
 		subgroupIds = subgroupIds + "\"" +subgroupId[i]+ "\"," ;	
 		if(i==subGroupSize-1)
-			subgroupIds = subgroupIds +"\""+subgroupId[i]+ "" ;	
-		Utilities.printInfoMessage(" --- subgroupIds " + subgroupIds);
+			subgroupIds = subgroupIds +"\""+subgroupId[i]+ "" ;			
 	}
 	subgroupIds =  "["+subgroupIds+"\"]";
 	Utilities.printInfoMessage(" --- Final subgroupIds String " + subgroupIds);
 	for(int i=0;i<optionGroupSize;i++)
 	{
 		
-		if(i<1)
-			optiongroupIds = "" +optiongroupId[i]+ "\"," ;	
-			if(i==1)
-				optiongroupIds = "\"" +optiongroupIds + "\""+ optiongroupId[i]+ "" ;	
+		if(i<optionGroupSize-1)
+			optiongroupIds = optiongroupIds + "\"" +optiongroupId[i]+ "\"," ;	
+			if(i==optionGroupSize-1)
+				optiongroupIds = optiongroupIds +"\""+optiongroupId[i]+ "" ;		
 		}
 		
 	optiongroupIds =  "["+optiongroupIds+"\"]";

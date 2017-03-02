@@ -10,7 +10,7 @@ import com.aet.framework.incentivioAutApi.web.WebLogin;
 import com.aet.framework.incentivioAutApi.web.WebMerchant;
 
 public class CreateGroupWeb_Test {
-	@Test
+	
 	public void test_method() throws Exception {
 
 		String webAccessToken;
@@ -20,9 +20,6 @@ public class CreateGroupWeb_Test {
 
 		WebLogin webLogin = new WebLogin();
 		WebMerchant webMerchant = new WebMerchant();
-		//WebProgram webProgram = new WebProgram();
-		//WebCampaign webCampaign = new WebCampaign();
-		//WebStore  WebStore1 = new WebStore();
 		WebItem WebItem1 = new WebItem();
 		WebGroup WebGroup1 = new WebGroup();
 

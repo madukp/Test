@@ -18,7 +18,7 @@ public class Test_MessageCreateFromWeb {
 
 	}
 
-	@Test
+
 	public void test_method() throws Exception {
 
 		String webAccessToken;

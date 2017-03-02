@@ -14,7 +14,7 @@ import com.aet.framework.incentivioAutApi.web.WebItem;
 
 public class CreateItemWeb_Test {
 	
-	@Test
+	
 	public void test_method() throws Exception {
 
 		String webAccessToken;
