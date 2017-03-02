@@ -49,8 +49,8 @@ public class CreateItemWeb_Test {
 		 Utilities.waitForSeconds(5);
 
 		//delete the item from the web
-		WebItem1.deleteItem(webAccessToken, clientId, merchantId, WebItem_id);
-		Utilities.printInfoMessage("Item ID : " + WebItem_id + "\n");
+		//WebItem1.deleteItem(webAccessToken, clientId, merchantId, WebItem_id);
+		//Utilities.printInfoMessage("Item ID : " + WebItem_id + "\n");
 
 		
 	}
