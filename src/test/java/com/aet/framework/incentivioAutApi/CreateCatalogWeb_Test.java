@@ -96,8 +96,8 @@ public class CreateCatalogWeb_Test {
 		Utilities.waitForSeconds(5);
 
 		//delete the catalog from the web
-		//webCatalog.deleteCatalog(webAccessToken, clientId, merchantId  storeId, groupId, catalogId);
-		//Utilities.printInfoMessage("Catalog ID : " + catalogId + "\n")
+		webCatalog.deleteCatalog(webAccessToken, clientId, merchantId,  storeId, groupId, catalogId);
+		Utilities.printInfoMessage("Catalog ID : " + catalogId + "\n");
 
 
 
