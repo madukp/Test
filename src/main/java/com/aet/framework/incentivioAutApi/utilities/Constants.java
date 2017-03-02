@@ -44,7 +44,7 @@ public final class Constants {
 	public static String merchantId = "merchantId";
 	public static String brandId = "brandId";
 	public static String categoryId = "categoryId";
-	public static String LangCode = "langCode";
+	public static String langCode = "langCode";
 	public static String optionGroups ="optionGroups";
 	public static String price ="price";
 	public static String startDate = "startDate";
@@ -63,11 +63,14 @@ public final class Constants {
 	public static String groupType = "groupType";
 	public static String itemIds = "itemIds";
 	public static String subGroups ="subGroups";
-	public static String groupexternalId = "externalId";
 	public static String defaultSelectedItemIds ="defaultSelectedItemIds";
 	public static String mandatoryItemIds= "mandatoryItemIds";
 	public static String maxItemSelections = "maxItemSelections";
 	public static String minItemSelections = "minItemSelections";
+	public static String groupExternalId = "externalId";
 	
-	
+	//-----------Web Catalog
+	public static String storeIds = "storeIds";
+	public static String groupIds = "groupIds";
+	public static String catalogexternalId = "externalId";
 }

@@ -55,9 +55,10 @@ public class WebStore {
 			String regionShortDescription = "Iowa";
 			String storephoneNumber = "777";
 			
-			//String jsonBody =  "{\"regionId\":\"" + storeRegionId + "\",\"title\":\"" + storeTitle + "\",\"shortDescription\":\"" + shortDesc + "\",\"longDescription\":\"" + longDesc + "\",\"storeType\":\"" + storesType + "\",\"smallImage\":\"" + storeSmalleImage + "\",\"address\":{\"streetAddress1\":\"Main\",\"streetAddress2\":\"1st lane\",\"city\":\"Ohio\",\"region\":\"Iowa\",\"postalCode\":\"7896\",\"country\":\"United States\"},\"region\":{\"regionId\":\"d8366b64-c342-11e5-8a63-0aa9f0965c75\",\"title\":\"IA\",\"shortDescription\":\"Iowa\"},\"phoneNumber\":\"777\"}" ;
+			
 			
 			String jsonBody= "{\"regionId\":\"" + storeRegionId + "\",\"title\":\"" + storeTitle + "\",\"shortDescription\":\"" + shortDesc + "\",\"longDescription\":\"" + longDesc + "\",\"storeType\":\"" + storesType + "\",\"smallImage\":\"" + storeSmalleImage + "\",\"address\":{\"streetAddress1\":\"" +storeStreetOne +"\",\"streetAddress2\":\"" + storeStreetTwo +"\",\"city\":\""+ storeCity +"\",\"region\":\""+ storeRegion +"\",\"postalCode\":\""+storePostalcode+"\",\"country\":\""+storeCountry+"\"},\"region\":{\"regionId\":\""+ storeRegionId +"\",\"title\":\""+storeRegionTitle+"\",\"shortDescription\":\""+regionShortDescription+"\"},\"phoneNumber\":\""+storephoneNumber+"\"}";      
+			
 			
 			
 			// request
@@ -100,7 +101,9 @@ public class WebStore {
 			
 			String baseUrl = Utilities.getDomain() + "incentivio-admin-api/incentivio-client-domain/clients/" + clientId
 				+ "/merchants/" + merchantId + "/stores/" + storeId;
-
+    
+			
+			
 		URL url = new URL(baseUrl);
 		connection = (HttpURLConnection) url.openConnection();
 		connection.setRequestMethod(Constants.DELETE);

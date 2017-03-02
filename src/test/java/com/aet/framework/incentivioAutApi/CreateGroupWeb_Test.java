@@ -1,26 +1,22 @@
 package com.aet.framework.incentivioAutApi;
 
-
 import org.junit.Test;
 
-import com.aet.framework.incentivioAutApi.mob.MobLogin;
-import com.aet.framework.incentivioAutApi.mob.MobMessages;
-import com.aet.framework.incentivioAutApi.utilities.Utilities;
-import com.aet.framework.incentivioAutApi.web.WebLogin;
-import com.aet.framework.incentivioAutApi.web.WebLogout;
-import com.aet.framework.incentivioAutApi.web.WebMerchant;
-import com.aet.framework.incentivioAutApi.web.WebStore;
-import com.aet.framework.incentivioAutApi.web.WebItem;
 
-public class CreateItemWeb_Test {
-	
+import com.aet.framework.incentivioAutApi.utilities.Utilities;
+import com.aet.framework.incentivioAutApi.web.WebGroup;
+import com.aet.framework.incentivioAutApi.web.WebItem;
+import com.aet.framework.incentivioAutApi.web.WebLogin;
+import com.aet.framework.incentivioAutApi.web.WebMerchant;
+
+public class CreateGroupWeb_Test {
 	@Test
 	public void test_method() throws Exception {
 
 		String webAccessToken;
 	
 
-		Utilities.printMessage("\n==================  API Test : Item Creation ==================  ");
+		Utilities.printMessage("\n==================  API Test : Group Creation ==================  ");
 
 		WebLogin webLogin = new WebLogin();
 		WebMerchant webMerchant = new WebMerchant();
@@ -28,9 +24,10 @@ public class CreateItemWeb_Test {
 		//WebCampaign webCampaign = new WebCampaign();
 		//WebStore  WebStore1 = new WebStore();
 		WebItem WebItem1 = new WebItem();
+		WebGroup WebGroup1 = new WebGroup();
 
 
-		//String clientId = "94cf98f2-8514-40c0-bfb6-c04a52e32714";
+		
 		String clientId = "94cf98f2-8514-40c0-bfb6-c04a52e32714";
 
 		// login to web
@@ -42,21 +39,23 @@ public class CreateItemWeb_Test {
 		Utilities.printInfoMessage("Merchant ID: " + merchantId + "\n");
 
 		// create item from the web
-		String WebItem_id = WebItem1.createItem(webAccessToken, clientId, merchantId);
-
-		Utilities.printInfoMessage("interval for manual verification\n");
-		System.out.println(WebItem_id);
-		 Utilities.waitForSeconds(5);
-
-		//delete the item from the web
-		WebItem1.deleteItem(webAccessToken, clientId, merchantId, WebItem_id);
-		Utilities.printInfoMessage("Item ID : " + WebItem_id + "\n");
-
+		String itemId = WebItem1.createItem(webAccessToken, clientId, merchantId);
+		Utilities.printInfoMessage("Item ID: "+itemId+"\n");
 		
+				
+			// create group from the web - optiongroups
+		String groupId = WebGroup1.createGroup(webAccessToken, clientId, merchantId, itemId );
+		Utilities.printInfoMessage("interval for manual verification\n");
+		System.out.println(groupId);
+		Utilities.waitForSeconds(5);
+
+		//delete the group from the web_option groups
+		WebGroup1.deleteGroup(webAccessToken, clientId, merchantId, itemId, groupId);
+		Utilities.printInfoMessage("Group ID : " + groupId + "\n");
+
 	}
 
 
 
 }
-
 

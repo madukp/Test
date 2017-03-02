@@ -46,9 +46,9 @@ public class CreateStoreWeb_Test {
 
 		Utilities.printInfoMessage("interval for manual verification\n");
 		System.out.println(WebStore_id);
-		 Utilities.waitForSeconds(5);
+		 Utilities.waitForSeconds(10);
 
-		// delete the store from the web
+		//delete the store from the web
 		WebStore1.deleteStore(webAccessToken, clientId, "77ae0b4c-0df8-4e64-bb15-49b27aa7257f", WebStore_id);
 		Utilities.printInfoMessage("StoreID : " + WebStore_id + "\n");
 

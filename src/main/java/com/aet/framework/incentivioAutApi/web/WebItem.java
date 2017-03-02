@@ -71,7 +71,7 @@ try{
 			String jsonString = JsonMapper.createItemRequest(itemPrice, itemBrandId, itemCategoryId, itemTitle, clientId, merchantId, itemExternalId, itemStartDate, itemEndDate);
 			
 			
-			String jsonBody = "{"+""+jsonString+",\""+Constants.discounts+"\":[],\""+Constants.displayInfo+"\":[{\""+Constants.title+"\":\"En\",\""+Constants.smallImage+"\":[\"https://s3.amazonaws.com/incentdev/94cf98f2-8514-40c0-bfb6-c04a52e32714/i/qa_logo_sm_81975891b4a94a39a65ca32ddd8271d1.jpg\"],\""+Constants.mediumImage+"\":[],\""+Constants.LangCode+"\":\"EN\"}],\""+Constants.extendedAttributes+"\":{},\""+Constants.privateAttributes+"\":{},\""+Constants.displayRank+"\":"+itemDisplayRank+",\""+Constants.status+"\":\""+itemDisplayStatus+"\",\""+Constants.applicableOrderTypes+"\":[\"PICKUP\",\"DELIVERY\"],\""+Constants.taxable+"\":"+itemDispalyTaxable+",\""+Constants.orderingChannels+"\":[\"MOBILE\"]}";	
+			String jsonBody = "{"+""+jsonString+",\""+Constants.discounts+"\":[],\""+Constants.displayInfo+"\":[{\""+Constants.title+"\":\"En\",\""+Constants.smallImage+"\":[\"https://s3.amazonaws.com/incentdev/94cf98f2-8514-40c0-bfb6-c04a52e32714/i/qa_logo_sm_81975891b4a94a39a65ca32ddd8271d1.jpg\"],\""+Constants.mediumImage+"\":[],\""+Constants.langCode+"\":\"EN\"}],\""+Constants.extendedAttributes+"\":{},\""+Constants.privateAttributes+"\":{},\""+Constants.displayRank+"\":"+itemDisplayRank+",\""+Constants.status+"\":\""+itemDisplayStatus+"\",\""+Constants.applicableOrderTypes+"\":[\"PICKUP\",\"DELIVERY\"],\""+Constants.taxable+"\":"+itemDispalyTaxable+",\""+Constants.orderingChannels+"\":[\"MOBILE\"]}";	
 			
 			
 			

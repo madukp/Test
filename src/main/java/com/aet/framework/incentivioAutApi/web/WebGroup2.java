@@ -12,7 +12,7 @@ import com.aet.framework.incentivioAutApi.utilities.JsonMapper;
 import com.aet.framework.incentivioAutApi.utilities.PropertyFile;
 import com.aet.framework.incentivioAutApi.utilities.Utilities;
 
-public class WebGroup {
+public class WebGroup2 {
 	
 	final String propertyFileName = "web_access.properties";
 	
@@ -38,15 +38,13 @@ public String createGroup_forCatalog(String webAccessToken, String clientId, Str
 	
 	for(int i=0;i<subGroupSize;i++)
 	{
-		Utilities.printInfoMessage(" --- # subgroupIds " + subGroupSize);
-		if(i<subGroupSize-1)
-		subgroupIds = subgroupIds + "\"" +subgroupId[i]+ "\"," ;	
-		if(i==subGroupSize-1)
-			subgroupIds = subgroupIds +"\""+subgroupId[i]+ "" ;	
-		Utilities.printInfoMessage(" --- subgroupIds " + subgroupIds);
+		if(i<1)
+		subgroupIds = "" +subgroupId[i]+ "\"," ;	
+		if(i==1)
+			subgroupIds =  "\""+subgroupIds +"\""+subgroupId[i]+ "" ;	
 	}
 	subgroupIds =  "["+subgroupIds+"\"]";
-	Utilities.printInfoMessage(" --- Final subgroupIds String " + subgroupIds);
+	Utilities.printInfoMessage(" --- subgroupIds " + subgroupIds);
 	for(int i=0;i<optionGroupSize;i++)
 	{
 		

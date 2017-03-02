@@ -53,7 +53,18 @@ public class Utilities {
 	}
 	
 	public static String getExternalId() {
-		return PropertyFile.readProperty("externalId", "config.properties");
+		return PropertyFile.readProperty("itemExternalId", "config.properties");
+	}
+	
+	public static String getCatalogExternalId() {
+		return PropertyFile.readProperty("catalogExternalId", "config.properties");
+	}
+	
+	public static String getsubGroupSize() {
+		return PropertyFile.readProperty("subgroupSize", "config.properties");
+	}
+	public static String getOptionGroupSize() {
+		return PropertyFile.readProperty("optiongroupSize", "config.properties");
 	}
 	
 	public static String getBrandId() {
@@ -63,7 +74,12 @@ public class Utilities {
 	public static String getCategoryId() {
 		return PropertyFile.readProperty("categoryId", "config.properties");
 	}
-	
+	public static String getgroupExternalId() {
+		return PropertyFile.readProperty("groupExternalId", "config.properties");
+	}
+	public static String getclientId() {
+		return PropertyFile.readProperty("clientId", "config.properties");
+	}
 	
 	
 	public static String getOptionGroups() {
