@@ -12,9 +12,9 @@ import com.aet.framework.incentivioAutApi.web.WebMerchant;
 import com.aet.framework.incentivioAutApi.web.WebMessages;
 import com.aet.framework.incentivioAutApi.web.WebProgram;
 
-public class Test_MessageCreateFromWeb {
+public class CreateMessagesWeb_Test {
 	// public static void main(String args[]) throws Exception {
-	public Test_MessageCreateFromWeb() throws Exception {
+	public CreateMessagesWeb_Test() throws Exception {
 
 	}
 
