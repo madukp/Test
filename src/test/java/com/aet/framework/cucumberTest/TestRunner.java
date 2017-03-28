@@ -15,7 +15,7 @@ import cucumber.api.junit.Cucumber;
 						"com.aet.framework.cucumberStepDefinitions"
 		},
 		//tags = { "@test","@BVT" }
-				tags = { "@CreateItem " }
+				tags = { "@CreateItem" }
 		
 )
 
