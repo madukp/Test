@@ -42,7 +42,7 @@ public class CreateItemWeb_Test {
 		//delete the item from the web
 		WebItem1.deleteItem(webAccessToken, clientId, merchantId, WebItem_id);
 		Utilities.printInfoMessage("Item ID : " + WebItem_id + "\n");
-		webMerchant.deleteMerchant(webAccessToken, clientId, merchantId);
+		
 		
 	}
 
