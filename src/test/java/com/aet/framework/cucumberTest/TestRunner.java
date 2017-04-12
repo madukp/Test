@@ -13,8 +13,8 @@ import cucumber.api.junit.Cucumber;
 		features = {"src/main/resources/cucumberFeatures" }, 
 		glue={
 						"com.aet.framework.cucumberStepDefinitions"
-		}
-		//tags = { "@test","@BVT" }
+		},
+		tags = { "@CreateItem","@CreateMessage" }
 				
 		
 )
