@@ -61,7 +61,7 @@ public class CreateMessagesWeb_Test {
 		Utilities.printInfoMessage("Message ID : " + messageID + "\n");
 
 		Utilities.printInfoMessage("interval for manual verification\n");
-		 Utilities.waitForSeconds(10);
+		 Utilities.waitForSeconds(3);
 
 		// login to mobile
 		mobAccessToken = mobLogin.getAutherizationMobile();
@@ -93,7 +93,7 @@ public class CreateMessagesWeb_Test {
 		//Utilities.printInfoMessage("Merchant ID: " + merchantId + "\n");
 
 		// logout from web
-		webLogout.getLogout(webAccessToken);
-		Utilities.printInfoMessage("Logged out : " + webAccessToken + "\n");
+		//webLogout.getLogout(webAccessToken);
+		//Utilities.printInfoMessage("Logged out : " + webAccessToken + "\n");
 	}
 }
