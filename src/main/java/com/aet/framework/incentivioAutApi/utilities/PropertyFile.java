@@ -41,7 +41,7 @@ public class PropertyFile {
 	}
 
 	public void testApp() {
-		System.out.println("dddddddddddd");
+		System.out.println("Test App");
 		// assertTrue( true );
 	}
 

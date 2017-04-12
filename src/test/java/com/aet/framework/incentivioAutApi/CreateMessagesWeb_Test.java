@@ -18,7 +18,7 @@ public class CreateMessagesWeb_Test {
 
 	}
 
-
+@Test
 	public void test_method() throws Exception {
 
 		String webAccessToken;
@@ -77,20 +77,20 @@ public class CreateMessagesWeb_Test {
 		// deleting");
 
 		// delete the message from the web
-		webMessages.deleteMessage(webAccessToken, clientId, merchantId, messageID);
-		Utilities.printInfoMessage("Message ID : " + messageID + "\n");
+		//webMessages.deleteMessage(webAccessToken, clientId, merchantId, messageID);
+		//Utilities.printInfoMessage("Message ID : " + messageID + "\n");
 
 		// delete the campaign from the web
-		webCampaign.deleteCampaign(webAccessToken, clientId, merchantId, programId, campaignId);
-		Utilities.printInfoMessage("Campaign ID: " + campaignId + "\n");
+		//webCampaign.deleteCampaign(webAccessToken, clientId, merchantId, programId, campaignId);
+		//Utilities.printInfoMessage("Campaign ID: " + campaignId + "\n");
 
 		// delete the programme from the web
-		webProgram.deleteProgram(webAccessToken, clientId, merchantId, programId);
-		Utilities.printInfoMessage("Programe ID: " + programId + "\n");
+		//webProgram.deleteProgram(webAccessToken, clientId, merchantId, programId);
+		//Utilities.printInfoMessage("Programe ID: " + programId + "\n");
 
 		// delete merchant from the web
-		webMerchant.deleteMerchant(webAccessToken, clientId, merchantId);
-		Utilities.printInfoMessage("Merchant ID: " + merchantId + "\n");
+		//webMerchant.deleteMerchant(webAccessToken, clientId, merchantId);
+		//Utilities.printInfoMessage("Merchant ID: " + merchantId + "\n");
 
 		// logout from web
 		webLogout.getLogout(webAccessToken);

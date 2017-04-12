@@ -1,5 +1,7 @@
 package com.aet.framework.cucumberStepDefinitions;
 
+import org.junit.Assert;
+
 import com.aet.framework.incentivioAutApi.utilities.Utilities;
 import com.aet.framework.incentivioAutApi.web.WebItem;
 import com.aet.framework.incentivioAutApi.web.WebLogin;
@@ -11,35 +13,26 @@ import cucumber.api.java.en.Then;
 
 public class CreateItemSteps {
 	
-	String webAccessToken;	
-	String clientId = "94cf98f2-8514-40c0-bfb6-c04a52e32714";
-	String merchantId;
-	String WebItem_id;
-	WebItem WebItem1 = new WebItem();	
-	WebMerchant webMerchant = new WebMerchant();
+	private WebItem WebItem1 = new WebItem();	
+	private WebMerchant webMerchant = new WebMerchant();
+	private CommonSteps cm = new CommonSteps();
+	private String WebItem_id;
+	// Here we are using the client id specific to the testing company
+	private String clientId = cm.clientId;
+	// token is already created in common steps when user logged in. we are utilizing the same token here. 
+	private String webAccessToken = cm.webAccessToken;
+	// merchant is already created in common steps . we are utilizing the same merchant id here. 
+	private String merchantId = cm.merchantId;
 	
-	@Given("^user authenticate to Incentivio$")
-	public void user_authenticate_to_Incentivio() throws Exception {
-		WebLogin webLogin = new WebLogin();		
-		webAccessToken = webLogin.getAutherization();
-	   
-	}
-
-	@Given("^user creates a merchant$")
-	public void user_creates_a_merchant() throws Exception {
-		
-		merchantId = webMerchant.createMerchant(webAccessToken, clientId);
-		Utilities.printMessage("\n==================  API Test : Merchant is Created ==================  ");
-	    
-	}
-
 	@Then("^user creates Item$")
 	public void user_creates_Item() throws Exception {
-		
-		
+		try{
 		WebItem_id = WebItem1.createItem(webAccessToken, clientId, merchantId);
 		Utilities.printMessage("\n==================  API Test : Item is Created ==================  ");
-	   
+		}
+		catch(Exception ex){
+			Assert.assertFalse("An Exception occured when creating an item", true);
+		}
 	}
 
 	@Then("^user verify created Item$")
@@ -50,9 +43,13 @@ public class CreateItemSteps {
 
 	@Then("^delete the created Item$")
 	public void delete_the_created_Item() throws Exception {
+		try{
 		WebItem1.deleteItem(webAccessToken, clientId, merchantId, WebItem_id);
 		Utilities.printMessage("\n==================  API Test : Item is Deleted ==================  ");
-	    
+		}
+		catch(Exception ex){
+			Assert.assertFalse("An Exception occured when deleting an item", true);
+		}
 	}
 
 }

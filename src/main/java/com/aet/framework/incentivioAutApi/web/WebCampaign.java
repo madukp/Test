@@ -13,10 +13,11 @@ import com.aet.framework.incentivioAutApi.utilities.Utilities;
 
 public class WebCampaign {
 	HttpURLConnection connection = null;
+	private static String campaignId;
 
 	public String createCampaign(String webAccessToken, String clientId, String merchantId, String programId) { // "d01d94cb-4bb9-457f-89f9-9d7374322bb1"
 
-		String campaignId = "";
+		
 		campaignId = setCampaignInfo(webAccessToken, clientId, merchantId, programId);
 		return campaignId;
 	}
@@ -78,6 +79,9 @@ public class WebCampaign {
 		}
 	}
 
+	public String getCampaignId(){
+		return campaignId;
+	}
 	public void deleteCampaign(String webAccessToken, String clientId, String merchantId, String programId,
 			String campaignId) {
 

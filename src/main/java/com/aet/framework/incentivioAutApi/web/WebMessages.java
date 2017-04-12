@@ -217,10 +217,12 @@ public class WebMessages {
 			String distributionStartDate = startDate;
 			String distributionEndDate = endDate;
 			String timezone = "Asia/Colombo";
+			String distributionRules = "{ruleType: &quot;EXPRESSION&quot;, expressionName: &quot;EVERYONE&quot;, operator: &quot;EQ&quot;, expressionValue: true}";
 
 			// Send request
 			String body = "{\"channels\":[\"" + distributionChannel + "\"],\"distributionMode\":\"" + distributionMode
 					+ "\",\"redistributionMode\":\"" + redistributionMode
+					+ "\",\"distributionRules\":\"" + distributionRules
 					+ "\",\"distributionSchedule\":{\"startDate\":\"" + startDate + "\",\"endDate\":\"" + endDate
 					+ "\",\"scheduleDays\":" + scheduleDays + ",\"timeSlots\":[" + timeSlots
 					+ "]},\"numMessagesToDistribute\":" + numMessagesToDistribute + ",\"distributionStartDate\":\""

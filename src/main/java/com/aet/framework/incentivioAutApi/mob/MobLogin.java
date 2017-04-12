@@ -17,7 +17,7 @@ public class MobLogin {
 	public String getAutherizationMobile() throws Exception {
 		String baseUrl = Utilities.getDomain() + PropertyFile.readProperty("mob_login_url", Constants.FILE_BASE_URLS);
 		System.out.println(baseUrl);
-		System.out.println(baseUrl);
+		
 
 		try {
 			URL url = new URL(baseUrl); // "https://incentqa.aeturnum.com/incentivio-mobile-api/oauth/token"
@@ -38,8 +38,17 @@ public class MobLogin {
 			String scope = PropertyFile.readProperty("scope", Constants.FILE_MOB_CREDENTAILS);
 
 			// Send request - PARAMETERIZED
+			
+			
+			
+			
 			DataOutputStream wr = new DataOutputStream(connection.getOutputStream());
-			String request = "username=shihan.s@gmail.com&password=Asd123&clientId=94cf98f2-8514-40c0-bfb6-c04a52e32714&grant_type=password&scope=read%20write";
+			String request = "username=" + username + "&password=" + password
+					+ "&clientId=" + clientID + "&grant_type=password&scope=read%20write";
+			System.out.println("request " + request);
+			
+			
+			//String request = "username=shihan.s@gmail.com&password=Asd123&clientId=94cf98f2-8514-40c0-bfb6-c04a52e32714&grant_type=password&scope=read%20write";
 			wr.writeBytes(request);
 			wr.close();
 
