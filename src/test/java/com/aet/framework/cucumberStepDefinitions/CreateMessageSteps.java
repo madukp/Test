@@ -32,7 +32,7 @@ public class CreateMessageSteps {
 	private String campaignId = webCampaign1.getCampaignId();
 	// token is already created in common steps when user logged in. we are utilizing the same token here. 
 	private String webAccessToken = cm.webAccessToken;
-	private String  mobAccessToken1 = cm.mobileAccessToken;
+	
 	// merchant is already created in common steps . we are utilizing the same merchant id here. 
 	private String merchantId = cm.merchantId;
 	private String messageID;	
@@ -56,8 +56,9 @@ public class CreateMessageSteps {
 @Then("^user verify created message in Mobile$")
 public void user_verify_created_message_in_Mobile() {
 			
-			// verifyMessageList
+	String  mobAccessToken1 = cm.mobileAccessToken;
 	try{
+		
 	mobMessages1.VerifyMessagesList(mobAccessToken1, messageID);
 	}
 	catch (Exception ex) {

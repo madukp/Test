@@ -39,7 +39,7 @@ public class WebMerchant {
 			String randomMessage = Utilities.getCurrentDate();
 
 
-			String merchantTitle = "-0 A0T MRCHNT " + randomMessage;
+			String merchantTitle = "-0 00T MRCHNT " + randomMessage;
 
 			String shortDesc = "AUT MERCHANT";
 			String longDesc = "AUT MERCHANT";

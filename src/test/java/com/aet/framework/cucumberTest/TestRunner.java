@@ -10,14 +10,14 @@ import cucumber.api.junit.Cucumber;
 
 @CucumberOptions(
 		plugin = { "pretty", "html:target/cucumber-html-report", "json:target/cucumber-report.json" }, 
-		features = {"src/main/resources/cucumberFeatures" }, 
+		features = {"src/main/resources/cucumberFeatures/temp" }, 
 		glue={
 						"com.aet.framework.cucumberStepDefinitions"
-		},
-		tags = { "@CreateItem","@CreateMessage" }
+		}
+		)
+		
 				
 		
-)
 
 
 public class TestRunner {
