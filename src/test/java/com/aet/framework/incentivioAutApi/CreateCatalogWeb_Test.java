@@ -12,7 +12,6 @@ import com.aet.framework.incentivioAutApi.web.WebCatalog;
 
 public class CreateCatalogWeb_Test {
 	
-	@Test
 	public void test_method() throws Exception {
 
 		String webAccessToken;

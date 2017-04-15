@@ -11,6 +11,7 @@ import com.aet.framework.incentivioAutApi.web.WebMerchant;
 
 public class CreateGroupWeb_Test {
 	
+	
 	public void test_method() throws Exception {
 
 		String webAccessToken;

@@ -22,6 +22,7 @@ public class MobMessages {
 
 			StringBuilder result = new StringBuilder();
 			System.out.println(baseUrl);
+			System.out.println("mobAccessToken "+ mobAccessToken);
 			URL url = new URL(baseUrl); // "https://incentqa.aeturnum.com/incentivio-mobile-api/appcontent?page=1&count=200&languagecode=EN"
 			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 			connection.setRequestMethod(Constants.GET);

@@ -39,7 +39,7 @@ public class WebMerchant {
 			String randomMessage = Utilities.getCurrentDate();
 
 
-			String merchantTitle = "-0 A0T MRCHNT " + randomMessage;
+			String merchantTitle = "-0 00T MRCHNT " + randomMessage;
 
 			String shortDesc = "AUT MERCHANT";
 			String longDesc = "AUT MERCHANT";
@@ -141,13 +141,13 @@ public class WebMerchant {
 		try {
 			String baseUrl = Utilities.getDomain() + "incentivio-admin-api/incentivio-client-domain/clients/" + clientId
 					+ "/merchants/" + merchantId;
-
+			System.out.println(baseUrl);
 			URL url = new URL(baseUrl);
 			connection = (HttpURLConnection) url.openConnection();
 			connection.setRequestMethod(Constants.DELETE);
 			connection.setRequestProperty(Constants.ContentType, "application/json");
 			connection.setRequestProperty("Authorization", "Bearer " + webAccessToken);
-
+			System.out.println("Authorization " + webAccessToken );
 			connection.setRequestProperty("Accept", "application/json, text/plain, */*");
 
 			connection.setUseCaches(false);

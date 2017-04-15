@@ -13,10 +13,10 @@ import com.aet.framework.incentivioAutApi.utilities.Utilities;
 
 public class WebProgram {
 	HttpURLConnection connection = null;
+	private static String programID;
 
 	public String createProgram(String webAccessToken, String clientId, String merchantId) {
-
-		String programID = "";
+		
 		programID = setProgrammeInfo(webAccessToken, clientId, merchantId);
 		return programID;
 	}
@@ -72,6 +72,12 @@ public class WebProgram {
 		}
 
 	}
+	
+	public String getProgramID(){
+		return programID;
+	}
+	
+	
 
 	public void deleteProgram(String webAccessToken, String clientId, String merchantId, String programId) {
 		try {
